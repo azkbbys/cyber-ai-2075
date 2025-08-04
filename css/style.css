@@ -1,0 +1,235 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+    color: #0f0;
+    font-family: 'FZXS12', sans-serif;
+    overflow: hidden;
+}
+
+@font-face {
+    font-family: 'FZXS12';
+    src: url('../font/方正像素12.ttf') format('truetype');
+}
+
+#container, #error-container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#screen, #error-screen {
+    width: 80%;
+    height: 80%;
+    border: 2px solid #0f0;
+    padding: 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+#content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    text-align: center;
+    white-space: pre-line;
+}
+
+#error-code {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    font-size: 12px;
+    line-height: 12px;
+    overflow: hidden;
+}
+
+#error-count {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    font-size: 24px;
+    color: #f00;
+    text-shadow: 0 0 10px #f00;
+    z-index: 100;
+    background-color: rgba(0,0,0,0.7);
+    padding: 10px 20px;
+    border: 1px solid #f00;
+}
+
+input {
+    background-color: #000;
+    color: #0f0;
+    border: 1px solid #0f0;
+    padding: 5px;
+    margin-top: 20px;
+    font-family: 'FZXS12', sans-serif;
+}
+
+button {
+    background-color: #000;
+    color: #0f0;
+    border: 1px solid #0f0;
+    padding: 5px 10px;
+    margin-top: 20px;
+    cursor: pointer;
+    font-family: 'FZXS12', sans-serif;
+}
+
+button:hover {
+    background-color: #0f0;
+    color: #000;
+}
+
+.color-block {
+    width: 200px;
+    height: 200px;
+    background-color: #00FFFF;
+    margin: 20px auto;
+}
+
+.dialog-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.7);
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dialog-box {
+    width: 70%;
+    background-color: #000;
+    border: 2px solid #0f0;
+    padding: 20px;
+    position: relative;
+    color: #0f0;
+    font-family: 'FZXS12', sans-serif;
+}
+
+.dialog-title {
+    color: #f0f;
+    border-bottom: 1px solid #0f0;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+    text-shadow: 0 0 5px #f0f;
+}
+
+.dialog-content {
+    line-height: 1.5;
+    margin-bottom: 20px;
+    white-space: pre-line;
+}
+
+.dialog-button {
+    background: #000;
+    color: #0f0;
+    border: 1px solid #0f0;
+    padding: 8px 15px;
+    cursor: pointer;
+    float: right;
+    font-family: 'FZXS12', sans-serif;
+}
+
+.dialog-button:hover {
+    background: #0f0;
+    color: #000;
+}
+
+pre {
+    font-family: 'FZXS12', monospace;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    background-color: rgba(0, 255, 0, 0.05);
+    padding: 10px;
+    border: 1px solid #0f0;
+    max-height: 60vh;
+    overflow-y: auto;
+}
+
+#end-container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000;
+}
+
+#end-screen {
+    width: 80%;
+    height: 80%;
+    border: 2px solid #0f0;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#end-content {
+    margin-top: 30px;
+}
+
+.glitch-text {
+    color: #0f0;
+    font-size: 24px;
+    margin: 30px 0;
+    text-shadow: 2px 2px 0 #f0f, -2px -2px 0 #00f;
+    animation: glitch 1s linear infinite;
+}
+
+@keyframes glitch {
+    0% { text-shadow: 2px 2px 0 #f0f, -2px -2px 0 #00f; }
+    25% { text-shadow: -2px -2px 0 #f0f, 2px 2px 0 #00f; }
+    50% { text-shadow: 2px -2px 0 #f0f, -2px 2px 0 #00f; }
+    75% { text-shadow: -2px 2px 0 #f0f, 2px -2px 0 #00f; }
+    100% { text-shadow: 2px 2px 0 #f0f, -2px -2px 0 #00f; }
+}
+
+#restart-btn {
+    background: #000;
+    color: #0f0;
+    border: 1px solid #0f0;
+    padding: 10px 20px;
+    font-size: 18px;
+    margin-top: 30px;
+    cursor: pointer;
+}
+
+#restart-btn:hover {
+    background: #0f0;
+    color: #000;
+}
+
+.button-group {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+#github-btn {
+    background: #000;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    font-family: 'FZXS12', sans-serif;
+}
+
+#github-btn:hover {
+    background: #fff;
+    color: #000;
+}
