@@ -1,3 +1,4 @@
+
 # Cyber AI 2075 - 虚拟逃脱
 
 ![Project Banner](banner.png)
@@ -32,3 +33,111 @@
 - CSS3
 - JavaScript ES6+
 - 响应式设计
+
+## 🎁 通关方法
+
+以下是整理后的各层通关方法（按关卡顺序）：
+
+### 关卡通关方法清单
+
+1. **level1**
+
+   - 方法：在输入框中输入"通过本层的密码"
+   - 自动跳转：level2
+2. **level2**
+
+   - 方法：手动修改URL中的key为"level3"
+3. **level3**
+
+   - 谜面：`eefeAg eefeDC eeECAgf DDCABA` (8 characters)
+   - 方法：修改key为"birthday"
+4. **birthday**
+
+   - 显示：`#00FFFF`色块
+   - 方法：修改key为"00FFFF"
+5. **00FFFF**
+
+   - 谜面：`01010100 01110010 01110101 01110100 01101000`
+   - 方法：二进制转ASCII得"Truth"，修改key为"truth"
+6. **truth**
+
+   - 谜面：圆周率前1000位
+   - 方法：修改key为"pi"
+7. **pi**
+
+   - 谜面：`IVXLCDM`
+   - 方法：罗马数字字符，修改key为"roman"
+8. **roman**
+
+   - 谜面：`01001000 01100001 01100011 01101011`
+   - 方法：二进制转ASCII得"Hack"，修改key为"hack"
+9. **hack**
+
+   - 谜面：`404`
+   - 方法：HTTP状态码，修改key为"notfound"
+10. **notfound**
+
+    - 谜面：`7F 45 4C 46`
+    - 方法：ELF文件头魔数，修改key为"elf"
+11. **elf**
+
+    - 谜面：`2B||!2B`
+    - 方法：莎士比亚名句变体，修改key为"shakespeare"
+12. **shakespeare**
+
+    - 谜面：`⌘⌘⌘`
+    - 方法：Mac命令键符号，修改key为"command"
+13. **command**
+
+    - 谜面：`E=mc²`
+    - 方法：质能方程，修改key为"einstein"
+14. **einstein**
+
+    - 谜面：`0x1F600`
+    - 方法：Unicode表情编码，修改key为"smile"
+15. **smile**
+
+    - 谜面：`R0VU`
+    - 方法：Base64解码得"GET"，修改key为"get"
+16. **get**
+
+    - 谜面：`HTTP/1.1 200 OK`
+    - 方法：HTTP成功响应，修改key为"success"
+17. **success**
+
+    - 谜面：`SELECT * FROM users;`
+    - 方法：SQL注入示例，修改key为"sql"
+18. **sql**
+
+    - 谜面：
+      ```
+      goto year_207;
+      表单用数字5代替
+      ```
+    - 方法：组合得"year_2075"，修改key为"year_2075"
+19. **year_2075**
+
+    - 谜面：`0x8BADF00D`
+    - 方法：程序员俚语"ate bad food"，修改key为"badfood"
+20. **badfood**
+
+    - 自动显示结局剧情，无需操作
+
+### 注意事项：
+
+1. 所有关卡均通过修改URL参数 `?key=`的值进入下一层
+2. 错误输入会跳转到错误页面(err.html)
+3. 第1关是唯一需要键盘输入的关卡
+4. 最终关卡(badfood)会自动跳转到结局页面(end.html)
+
+### 防作弊机制：
+
+1. 使用Cookie记录当前关卡
+2. 只能按顺序进入下一关
+3. 直接输入未解锁的关卡key会跳转到错误页面
+
+### 特殊技巧：
+
+- 第3关的密码是"birthday"（字母移位密码）
+- 第18关需要组合提示中的数字
+- 技术类关卡多涉及编程/计算机相关知识
